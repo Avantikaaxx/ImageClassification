@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: training-job
+spec:
+  template:
+    metadata:
+      name: training-job
+    spec:
+      containers:
+      - name: training-main
+        image: avantikaaxx/imagenet_train
+        volumeMounts:
+        - mountPath: "/var/sharedlib"
+          name: "sharedspace"
+      volumes: 
+      - name: sharedspace
+      restartPolicy: Never

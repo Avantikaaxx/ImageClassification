@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<meta charset=utf-8 />
+<html lang="en">
+ <title>Homework</title>
+ <body style="background-color:pink;">
+ <meta name="description:" content="Imagenet:Cloud and ML-HW4">
+ <script src="{{ url_for('static', filename='upload.js') }}"></script>
+
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+</style>
+</head>
+<body>
+<br />
+<form action = "/uploader" method = "POST" 
+ enctype = "multipart/form-data">
+  <input type='file' name = 'file' onchange="readURL(this);" />
+    <img id="blah" src="#" alt="your image" />
+ <br />
+<br />
+<br />
+<br />	
+<form action="/train/">
+  <input type="submit" value="Train" />
+</form>
+<br />	
+<br />	
+<br />	
+ <input type = "submit", value="Predict" />
+ 
+
+
+
+</form>
+
+</body>
+</html>
+
+
+
